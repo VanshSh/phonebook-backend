@@ -23,7 +23,7 @@ app.use(logger);
 let persons = [
   {
     id: 1,
-    name: "Arto Hellas",
+    name: "Arto Helas",
     number: "040-123456",
   },
   {
