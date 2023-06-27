@@ -86,13 +86,13 @@ app.post("/api/persons", (req, res) => {
     res.status(400).json({
       error: "content missing",
     });
-  } else if (nameExists) {
+  } else if (nameExists) {+
     res.status(400).json({
       error: "name must be unique",
     });
   } else {
     const newPerson = {
-      id: getRandomInt(100000000),
+      id: getRandomInt(1000000000),
       name: body.name,
       number: body.number,
     };
