@@ -33,7 +33,7 @@ let persons = [
   },
   {
     id: 3,
-    name: "Dan Abramov",
+    name: "Vansh",
     number: "12-43-234345",
   },
   {
@@ -86,8 +86,8 @@ app.post("/api/persons", (req, res) => {
     res.status(400).json({
       error: "content missing",
     });
-  } else if (nameExists) {+
-    res.status(400).json({
+  } else if (nameExists) {
+    +res.status(400).json({
       error: "name must be unique",
     });
   } else {
