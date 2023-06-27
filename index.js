@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const app = express();
+
 app.use(express.static("dist"));
 app.use(express.json());
 app.use(cors());
@@ -86,8 +87,8 @@ app.post("/api/persons", (req, res) => {
     res.status(400).json({
       error: "content missing",
     });
-  } else if (nameExists) {+
-    res.status(400).json({
+  } else if (nameExists) {
+    +res.status(400).json({
       error: "name must be unique",
     });
   } else {
