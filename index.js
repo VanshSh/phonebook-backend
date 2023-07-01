@@ -119,7 +119,7 @@ app.get('/api/persons/:id', (req, res, next) => {
 app.delete('/api/persons/:id', (req, res, next) => {
   const id = req.params.id
   Person.findByIdAndRemove(id)
-    .then((result) => {
+    .then(() => {
       res.status(204).end()
     })
     .catch((err) => {
