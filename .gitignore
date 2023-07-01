@@ -1,0 +1,33 @@
+# Ignore MongoDB data files
+/data/
+/dbpath
+
+# Ignore Node.js dependencies
+/node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore logs
+*.log
+
+
+
+# Ignore system files
+.DS_Store
+
+# Ignore editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Ignore package-lock.json for npm
+package-lock.json
+
+# Ignore yarn.lock for Yarn
+yarn.lock
+
+# Ignore .txt files
+*.txt
