@@ -1,5 +1,7 @@
 require('dotenv').config()
 const express = require('express')
+const { info, error } = require('./utils/logger')
+const config = require('./utils/config')
 const Person = require('./modules/person')
 const cors = require('cors')
 const morgan = require('morgan')
@@ -129,7 +131,6 @@ app.delete('/api/persons/:id', (req, res, next) => {
 app.use(errorHandler)
 app.use(unknownEndpoint)
 
-const PORT = process.env.PORT || 3001
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
+app.listen(config.PORT, () => {
+  info(`Server running on port ${config.PORT}`)
 })
